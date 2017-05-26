@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Appstronaut_Admin>
+            <active>true</active>
+            <codePool>local</codePool>
+        </Appstronaut_Admin>
+    </modules>
+</config>

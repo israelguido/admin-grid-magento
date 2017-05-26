@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<config>
+    <modules>
+        <Appstronaut_Admin>
+            <version>1.0.0.0</version>
+        </Appstronaut_Admin>
+    </modules>
+    <adminhtml>
+        <layout>
+            <updates>
+                <appstronaut_admin>
+                    <file>appstronaut/admin.xml</file>
+                </appstronaut_admin>
+            </updates>
+        </layout>
+        <events>
+            <sales_order_grid_collection_load_before>
+                <observers>
+                    <appstronaut_admin>
+                        <model>appstronaut_admin/observer</model>
+                        <method>salesOrderGridCollectionLoadBefore</method>
+                    </appstronaut_admin>
+                </observers>
+            </sales_order_grid_collection_load_before>
+        </events>
+    </adminhtml>
+    <global>
+        <models>
+            <appstronaut_admin>
+                <class>Appstronaut_Admin_Model</class>
+            </appstronaut_admin>
+            <sales_resource>
+                <rewrite>
+                    <order_grid_collection>Appstronaut_Admin_Model_Resource_Sales_Order_Grid_Collection</order_grid_collection>
+                </rewrite>
+            </sales_resource>
+        </models>
+    </global>
+</config>
